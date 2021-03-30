@@ -18,4 +18,11 @@ server.get("/", (req, res) => {
     res.status(200).json({ message: "api is up" });
 });
 
+server.use((err, req, res, next) => { // eslint-disable-line
+    res.status(500).json({
+      message: err.message,
+      stack: err.stack,
+    });
+});
+
 module.exports = server
