@@ -1,4 +1,4 @@
-const Users = require('../users/users-model');
+//const Users = require('../users/users-model');
 const server = require('../server');
 const request = require('supertest');
 const db = require("../data/db-config");
