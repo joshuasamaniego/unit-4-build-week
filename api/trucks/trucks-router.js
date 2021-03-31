@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Trucks = require('./trucks-model')
+const Trucks = require('./trucks-model');
 const { checkIfLoggedIn, loginCredentials } = require('./trucks-middleware');
 
 router.get('/', async (req, res, next) => {
@@ -43,7 +43,7 @@ router.delete('/:id', async (req, res, next) => {
         res.status(500).json({ message: "delete failed" })
       }
     } catch(err) { next(err) }
-  });
+});
 
 
 module.exports = router;
