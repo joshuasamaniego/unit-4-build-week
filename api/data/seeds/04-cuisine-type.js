@@ -5,11 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('cuisine_type').insert([
-        {cuisine_type: 'Mexican'},
-        {cuisine_type: 'Italian'},
-        {cuisine_type: 'American'},
-        {cuisine_type: 'Barbecue'},
-        {cuisine_type: 'Japanese'},
+        {cuisine_type: 'Mexican', truck_id: 2},
+        {cuisine_type: 'Italian', truck_id: 3},
+        {cuisine_type: 'American', truck_id: 1}
       ]);
     });
 };
